@@ -1,0 +1,2 @@
+module IsolatedService
+end

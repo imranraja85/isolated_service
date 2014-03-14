@@ -1,0 +1,4 @@
+require 'sinatra'
+require File.expand_path(File.join('lib', 'isolated_service', '<%= @file_name %>', '<%= @file_name%>'))
+
+run Rack::URLMap.new "/" => IsolatedService::<%= @file_name.camelcase %>::Server

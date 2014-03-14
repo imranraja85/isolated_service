@@ -1,0 +1,2 @@
+pricing_isolate_service: rackup --port 3900 lib/isolate_services/pricing/pricing.ru
+tss_isolated_service: rackup --port 3900 lib/isolated_services/tss/tss.ru
