@@ -3,7 +3,7 @@
 === Description
 Fake service calls in Rails applications. This is especially useful in service oriented architecture environments.
 
-=== Setup
+=== Installation
 
 Add the gem to you Gemfile
   gem "isolated_service", :group => :development
@@ -11,6 +11,8 @@ Add the gem to you Gemfile
 Bundle install
   bundle install
   
+=== Setting Up a Fake Service
+
 Now you can run the isolated_service generator to start building out your fake service
    rails g isolated_service auth
 
