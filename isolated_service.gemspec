@@ -9,15 +9,14 @@ Gem::Specification.new do |s|
   s.version     = IsolatedService::VERSION
   s.authors     = ["Imran Raja"]
   s.email       = ["imranraja85@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of IsolatedService."
-  s.description = "TODO: Description of IsolatedService."
+  s.homepage    = "https://github.com/imranraja85/isolated_service"
+  s.summary     = "Isolated services lets you fake service calls"
+  s.description = "Isolated services lets you fake service calls. This allows you to stub out calls to services that are not currently accessible or not yet build."
 
-  #s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.files = Dir["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["MIT-LICENSE", "Rakefile", "README.rdoc", "lib/**/*"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.0.2"
-
-  s.add_development_dependency "sqlite3"
+  s.add_dependency "rails", ">= 2.0.0"
+  s.add_dependency "sinatra", ">= 1.4.0"
+  s.add_dependency "foreman", ">= 0.60.0"
 end
