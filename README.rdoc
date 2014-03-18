@@ -1,4 +1,4 @@
-= IsolateServices
+= IsolatedService
 
 === Description
 Fake service calls in Rails applications. This is especially useful in service oriented architecture environments.
