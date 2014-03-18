@@ -1,8 +1,8 @@
 = IsolateServices
 
+=== Description
 Fake service calls in Rails applications. This is especially useful in service oriented architecture environments.
 
-%h test
 === Setup
 
 Add the gem to you Gemfile
@@ -14,7 +14,7 @@ Bundle install
 Now you can run the isolated_service generator to start building out your fake service
    rails g isolated_service auth
 
-This also generates (or appends) a Procfile with the following line. Adjust to port as necessary
+This also generates (or appends) a Procfile with the following line. Adjust the port as necessary
    auth_isolated_service: rackup --port 3900 lib/isolated_service/auth/auth.ru
    
 Update your service yml file to point to your fake service. For example
@@ -23,8 +23,17 @@ Update your service yml file to point to your fake service. For example
 Stub out your service calls in the generated file located at
    lib/isolated_service/auth/auth.rb
    
+Start your fake service
+   foreman start
+
 Start your server with the ISOLATE=true environment variable
    ISOLATE=true rails s
    
 Now your rails application with hit your fake sinatra-powered service!
-  
+
+== Troubleshooting and FAQs
+
+<b>How do I read my yaml file if there is ruby in there?</b>
+
+You will need to wrap your yaml file with ERB. For example: 
+   YAML.load(ERB.new(File.read("config/auth_service.yml")).result)
