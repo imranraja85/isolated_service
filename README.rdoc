@@ -1,15 +1,21 @@
 = IsolatedService
 
 === Description
-Fake service calls in Rails applications. This is especially useful in service oriented architecture environments.
+IsolatedService provides an unobstrustive way of faking services in Rails which is especially useful in service oriented architecture environments.
+It generates a sinatra based application in your lib directory that acts as a stand in for your actual service.
+Here are a few benefits:
+
+* Increased response time because you are hitting a lightweight app on your own development machine
+* Don't need to be on the internal network if you are using an internal service
+* Services are always available :)
 
 === Installation
 
 Add the gem to you Gemfile
   gem "isolated_service", :group => :development
-  
-Bundle install
-  bundle install
+
+Then do your usual bundle install
+
   
 === Setting Up a Fake Service
 
@@ -31,7 +37,7 @@ Start your fake service
 Start your server with the ISOLATE=true environment variable
    ISOLATE=true rails s
    
-Now your rails application with hit your fake sinatra-powered service!
+Don't want to use your fake services? Don't set the ISOLATE variable. Now your rails application will hit your fake sinatra based service!
 
 == Troubleshooting and FAQs
 
@@ -49,3 +55,10 @@ You will need to wrap your yaml file with ERB. For example:
   
 == Got an issue?
 Go here and make a new issue request: http://github.com/imranraja85/isolated_service/issues
+
+=== Contributions and Credits
+
+Coded by Imran Raja https://github.com/imranraja85
+
+Inspired by @chrishunt's RubyConf talk "Service Oriented Architecture at Square". 
+You can view it here: https://www.youtube.com/watch?v=6mesJxUVZyI
