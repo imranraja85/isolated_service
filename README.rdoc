@@ -47,5 +47,5 @@ You will need to wrap your yaml file with ERB. For example:
   Add the following line to the .powenv file in your root directory:
   export ISOLATE=true
   
-== Have an issues?
+== Got an issue?
 Go here and make a new issue request: github.com/imranraja85/isolated_service/issues
