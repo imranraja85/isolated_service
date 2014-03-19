@@ -48,4 +48,4 @@ You will need to wrap your yaml file with ERB. For example:
   export ISOLATE=true
   
 == Got an issue?
-Go here and make a new issue request: github.com/imranraja85/isolated_service/issues
+Go here and make a new issue request: http://github.com/imranraja85/isolated_service/issues
