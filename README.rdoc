@@ -40,11 +40,9 @@ Now your rails application with hit your fake sinatra-powered service!
 You will need to wrap your yaml file with ERB. For example: 
    YAML.load(ERB.new(File.read("config/auth_service.yml")).result)
    
-   <b>How do I read my yaml file if there is ruby in there?</b>
-
-Do I need to use foreman? 
+<b>Do I need to use foreman?</b>
    No. Foreman is just being used to run your rack app. You can rackup your fake service directly in your terminal.
    
-How do I set an enviroment variable with pow?
+<b>How do I set an enviroment variable with pow?<b>
   Add the following line to the .powenv file in your root directory:
   export ISOLATE=true
