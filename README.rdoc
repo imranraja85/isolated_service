@@ -1,7 +1,7 @@
 = IsolatedService
 
 === Description
-IsolatedService provides an unobstrustive way of faking services in Rails which is especially useful in service oriented architecture environments.
+IsolatedService provides an unobtrusive way of faking services in Rails which is especially useful in service oriented architecture environments.
 It generates a sinatra based application in your lib directory that acts as a stand in for your actual service.
 Here are a few benefits:
 
